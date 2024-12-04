@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap'); 
+*{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(assets/imgs/bgbgbg.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-container{
+   border: 2px solid pink;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    text-shadow: rgba(0, 0, 0, .25) 0 2px 2px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+/* From Uiverse.io by e-coders */ 
+button {
+    appearance: none;
+    background-color: transparent;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-right: 5rem;
+}
+   
+button:disabled {
+    pointer-events: none;
+}
+   
+button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+   
+button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+/* From Uiverse.io by catraco */ 
+.btn-class-name {
+    --primary: 255, 90, 120;
+    --secondary: 150, 50, 60;
+    width: 60px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    outline: 10px solid rgb(var(--primary), .5);
+    border-radius: 100%;
+    position: relative;
+    transition: .3s;
+    margin: 15px 0 10px 15px
+}
+
+.btn-class-name .back {
+    background: rgb(var(--secondary));
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-class-name .front {
+    background: linear-gradient(0deg, rgba(var(--primary), .6) 20%, rgba(var(--primary)) 50%);
+    box-shadow: 0 .5em 1em -0.2em rgba(var(--secondary), .5);
+    border-radius: 100%;
+    position: absolute;
+    border: 1px solid rgb(var(--secondary));
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: inherit;
+    transform: translateY(-15%);
+    transition: .15s;
+    color: rgb(var(--secondary));
+}
+
+.btn-class-name:active .front {
+    transform: translateY(0%);
+    box-shadow: 0 0;
+}

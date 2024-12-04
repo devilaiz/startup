@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Test</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <button>Ә</button>
+            <button>Ө</button>
+            <button>Һ</button>
+            <button>Ғ</button>
+            <button>Қ</button>
+            <button>Ң</button>
+            <button>I</button>
+            <button>Ұ</button>
+            <button>Ү</button>
+            <button class="btn-class-name">
+                <span class="back"></span>
+                <span class="front"></span>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <audio id="sound-Ә" src="main/audios/bk01_16.mp3"></audio>
+        <audio id="sound-Ө" src="main/audios/bk01_34.mp3"></audio>
+        <audio id="sound-Һ" src="main/audios/bk01_142.mp3"></audio>
+        <audio id="sound-Ғ" src="main/audios/bk01_111.mp3"></audio>
+        <audio id="sound-Қ" src="main/audios/bk01_120.mp3"></audio>
+        <audio id="sound-Ң" src="main/audios/bk01_133.mp3"></audio>
+        <audio id="sound-I" src="main/audios/bk01_74.mp3"></audio>
+        <audio id="sound-Ұ" src="main/audios/bk01_43.mp3"></audio>
+        <audio id="sound-Ү" src="main/audios/bk01_52.mp3"></audio>
+        <audio id="sound-error" src="main/audios/100-k-1-wrong-answer.mp3"></audio>
+    </main>
+
+    <script>
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', () => {
+                const letter = button.textContent.trim();
+                const audio = document.getElementById(`sound-${letter}`);
+                if (audio) {
+                    audio.currentTime = 0;
+                    audio.play();
+                }
+            });
+        });
+
+        document.querySelector('.btn-class-name').addEventListener('click', () => {
+            const errorSound = document.getElementById('sound-error');
+            errorSound.currentTime = 0;  // Сброс времени воспроизведения
+            errorSound.play();  // Воспроизведение звука ошибки
+        });
+    </script>
+</body>
+</html>
